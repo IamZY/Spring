@@ -1,10 +1,13 @@
 package com.ntuzy.bean;
 
+import org.springframework.beans.factory.annotation.Value;
+
 /**
  * @Author IamZY
  * @create 2020/2/20 16:13
  */
 public class Person {
+    @Value("${person.nickname}")
     private String name;
     private int age;
 
@@ -30,5 +33,13 @@ public class Person {
     }
 
     public Person() {
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

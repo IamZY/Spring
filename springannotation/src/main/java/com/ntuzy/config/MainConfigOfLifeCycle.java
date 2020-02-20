@@ -2,6 +2,7 @@ package com.ntuzy.config;
 
 import com.ntuzy.bean.Car;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -55,6 +56,7 @@ import org.springframework.context.annotation.Configuration;
  * @create 2020/2/20 19:58
  */
 @Configuration
+@ComponentScan("com.ntuzy.bean")
 public class MainConfigOfLifeCycle {
 
 
