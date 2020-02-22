@@ -1,5 +1,6 @@
 package com.ntuzy.test;
 
+import com.ntuzy.bean.Car;
 import com.ntuzy.bean.Person;
 import com.ntuzy.config.MainConfigOfAutowired;
 import com.ntuzy.config.MainConfig_Pro;
@@ -26,15 +27,12 @@ public class IOTest_Autowired {
 
         try {
 
-            BookService bookService1 = BookService.class.newInstance();
-            System.out.println(bookService1);
+            Car car = Car.class.newInstance();
+            car.setName("1");
+            System.out.println(car);
 
 
-            Person person = (Person) Class.forName("com.ntuzy.bean.Person").newInstance();
-            System.out.println(person.getName());
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        }  catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
