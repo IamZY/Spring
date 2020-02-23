@@ -1,0 +1,12 @@
+
+server:
+  port: 8888
+
+spring:
+  application:
+    name: service-consumer # 将来作为微服务注入到容器中
+eureka:
+  client:
+    service-url: # EurekaServer地址
+      defaultZone: http://127.0.0.1:10086/eureka
+
