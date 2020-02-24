@@ -9,12 +9,14 @@
         <module name="ntuzy-eureka" />
         <module name="ntuzy-service-consumer" />
         <module name="ntuzy-service-provider" />
+        <module name="ntuzy-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ntuzy-eureka" target="1.8" />
       <module name="ntuzy-service-consumer" target="1.8" />
       <module name="ntuzy-service-provider" target="1.8" />
+      <module name="ntuzy-zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

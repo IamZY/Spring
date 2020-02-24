@@ -1,12 +1,22 @@
-
 server:
   port: 8888
 
 spring:
   application:
-    name: service-consumer # 将来作为微服务注入到容器中
+    name: service-consumer
 eureka:
   client:
-    service-url: # EurekaServer地址
+    service-url:
       defaultZone: http://127.0.0.1:10086/eureka
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
+
+feign:
+  hystrix:
+    enabled: true

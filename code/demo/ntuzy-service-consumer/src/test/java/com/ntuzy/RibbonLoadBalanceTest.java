@@ -20,9 +20,9 @@ public class RibbonLoadBalanceTest {
     private RibbonLoadBalancerClient client;
 
     @Test
-    public void test(){
+    public void test() {
 
-        for(int i = 0;i < 20;i++) {
+        for (int i = 0; i < 20; i++) {
             ServiceInstance choose = client.choose("service-provider");
             System.out.println("ip " + choose.getHost() + "port " + choose.getPort());
         }
