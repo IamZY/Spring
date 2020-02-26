@@ -35,6 +35,7 @@
         </td>
       </template>
     </v-data-table>
+
     <!--弹出的对话框-->
     <v-dialog max-width="500" v-model="show" persistent scrollable>
       <v-card>
@@ -51,6 +52,7 @@
         </v-card-text>
       </v-card>
     </v-dialog>
+
   </v-card>
 </template>
 
