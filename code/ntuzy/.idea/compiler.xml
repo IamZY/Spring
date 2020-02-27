@@ -11,6 +11,7 @@
         <module name="ntuzy-item-interface" />
         <module name="ntuzy-item-service" />
         <module name="ntuzy-registry" />
+        <module name="ntuzy-upload" />
       </profile>
     </annotationProcessing>
   </component>

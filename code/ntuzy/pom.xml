@@ -12,6 +12,7 @@
         <module>ntuzy-gateway</module>
         <module>ntuzy-item</module>
         <module>ntuzy-common</module>
+        <module>ntuzy-upload</module>
     </modules>
     <packaging>pom</packaging>
 

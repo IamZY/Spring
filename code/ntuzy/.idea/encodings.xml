@@ -8,5 +8,6 @@
     <file url="file://$PROJECT_DIR$/ntuzy-item/ntuzy-item-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ntuzy-item/ntuzy-item-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ntuzy-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ntuzy-upload" charset="UTF-8" />
   </component>
 </project>
