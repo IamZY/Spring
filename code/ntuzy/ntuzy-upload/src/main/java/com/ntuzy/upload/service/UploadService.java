@@ -1,8 +1,11 @@
 package com.ntuzy.upload.service;
 
+import com.github.tobato.fastdfs.domain.StorePath;
+import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,6 +26,10 @@ public class UploadService {
     private static final List<String> CONTENT_TYPES = Arrays.asList("jpg", "gif");
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UploadService.class);
+
+    @Autowired
+    private FastFileStorageClient storageClient;
+
     public String upload(MultipartFile file) {
         // 校验文件类型
         String originalFilename = file.getOriginalFilename();
@@ -41,11 +48,12 @@ public class UploadService {
             }
 
             // 保存服务器
-            file.transferTo(new File("D:\\images\\" + originalFilename));
-
+//            file.transferTo(new File("D:\\images\\" + originalFilename));
+            String ext = StringUtils.substringAfterLast(originalFilename, ".");
+            StorePath storePath = this.storageClient.uploadFile(file.getInputStream(), file.getSize(), ext, null);
             // 返回url回显
-            return "http://image.ntuzy.com/" + originalFilename;
-
+//            return "http://image.ntuzy.com/" + originalFilename;
+            return "http://image.ntuzy.com/" + storePath.getFullPath();
         } catch (IOException e) {
             LOGGER.info("服务器错误，{}",originalFilename);
         }
