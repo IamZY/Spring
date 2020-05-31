@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <util:list id="bookList">
+        <value>111</value>
+        <value>222</value>
+        <value>333</value>
+    </util:list>
+
+    <!-- user对象配置 -->
+    <bean id="user" class="com.ntuzy.spring5.User" scope="prototype"></bean>
+
+
+    <bean id="book" class="com.ntuzy.spring5.Book">
+        <!-- 将特殊的符号转义 -->
+        <property name="bname">
+            <value>
+                <![CDATA[<<南京>>]]]>
+            </value>
+        </property>
+     </bean>
+
+
+    <bean id="myBean" class="com.ntuzy.spring5.factoryBean.MyBean">
+
+    </bean>
+
+
+</beans>
