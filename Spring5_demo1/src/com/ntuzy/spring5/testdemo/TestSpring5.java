@@ -3,9 +3,11 @@ package com.ntuzy.spring5.testdemo;
 import com.ntuzy.spring5.Book;
 import com.ntuzy.spring5.Orders;
 import com.ntuzy.spring5.User;
+import com.ntuzy.spring5.config.SpringConfig;
 import com.ntuzy.spring5.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -77,6 +79,15 @@ public class TestSpring5 {
     public void testAdd6() {
         // 加载spring配置文件
         ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+        // 获取配置对象
+        UserService userService = (UserService) context.getBean("userService", UserService.class);
+        userService.add();
+    }
+
+    @Test
+    public void testAdd7() {
+        // 加载spring配置文件
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         // 获取配置对象
         UserService userService = (UserService) context.getBean("userService", UserService.class);
         userService.add();
