@@ -14,4 +14,17 @@
     -->
     <context:component-scan base-package="com.ntuzy.spring5"></context:component-scan>
 
+    <!--
+        use-default-filters="false"自己配置扫描规则
+     -->
+    <context:component-scan base-package="com.ntuzy.spring5" use-default-filters="false">
+        <!-- 只扫描报下所有注解为controller的类 -->
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:include-filter>
+    </context:component-scan>
+
+    <context:component-scan base-package="com.ntuzy.spring5" use-default-filters="false">
+        <!-- 不扫描 -->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>
+    </context:component-scan>
+
 </beans>

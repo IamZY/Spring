@@ -73,8 +73,14 @@ public class TestSpring5 {
         userService.add();
     }
 
-
-
+    @Test
+    public void testAdd6() {
+        // 加载spring配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean4.xml");
+        // 获取配置对象
+        UserService userService = (UserService) context.getBean("userService", UserService.class);
+        userService.add();
+    }
 
 
 }
