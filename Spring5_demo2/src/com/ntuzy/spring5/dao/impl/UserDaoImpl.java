@@ -1,4 +1,6 @@
-package com.ntuzy.spring5;
+package com.ntuzy.spring5.dao.impl;
+
+import com.ntuzy.spring5.dao.UserDao;
 
 /**
  * @Author IamZY

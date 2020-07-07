@@ -1,5 +1,8 @@
 package com.ntuzy.spring5;
 
+import com.ntuzy.spring5.dao.UserDao;
+import com.ntuzy.spring5.dao.impl.UserDaoImpl;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -19,7 +22,6 @@ public class JDKProxy {
         UserDao userDao = new UserDaoImpl();
 
         UserDao dao = (UserDao) Proxy.newProxyInstance(JDKProxy.class.getClassLoader(), interfaces, new UserDaoProxy(userDao));
-
 
         int add = dao.add(1, 2);
 

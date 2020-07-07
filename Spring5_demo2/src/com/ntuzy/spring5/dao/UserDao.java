@@ -1,4 +1,4 @@
-package com.ntuzy.spring5;
+package com.ntuzy.spring5.dao;
 
 /**
  * @Author IamZY
