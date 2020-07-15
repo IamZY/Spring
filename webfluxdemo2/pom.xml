@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ntuzy</groupId>
-    <artifactId>demoreactor</artifactId>
+    <artifactId>webfluxdemo1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demoreactor</name>
+    <name>webfluxdemo1</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
         <dependency>
@@ -29,15 +29,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-core</artifactId>
-            <version>3.1.5.RELEASE</version>
-        </dependency>
-
-
     </dependencies>
 
     <build>
